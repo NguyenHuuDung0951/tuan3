@@ -1,5 +1,6 @@
 import { useReducer, useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { blue } from 'react-native-reanimated/lib/typescript/Colors';
 
 
 const initialState = {
@@ -31,6 +32,7 @@ const FormLogin = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.header}>Đăng nhập hệ thống</Text>
         <TextInput
         value={state.email}
         onChangeText={text =>
@@ -93,6 +95,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 5,
   },
+  header: {
+    fontSize: 30,
+    textAlign: 'center',
+    fontWeight: '200'
+  }
 });
 
 export default FormLogin;
